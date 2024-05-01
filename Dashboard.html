@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <nav>
+        <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Dashboard.html">Dashboard</a></li>
+        <li><a href="add-data.html">Add-Data</a></li>
+        <li><a href="ebout.html">feedback</a></li>
+        <li><button onclick="logout()">Logout</button></li>
+        </ul>
+
+        </ul>
+    </nav>
+
+
+    <script>
+        function logout() {
+            // Mengarahkan kembali ke halaman login saat logout
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
