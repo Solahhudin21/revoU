@@ -1,0 +1,156 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ----- Navigation Bar ----- */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    width: 100%;
+    padding: 14px 3% 14px;
+    position: fixed;
+    background-color: #008bdc8c;
+    backdrop-filter: blur(70px);
+    font-family: "Poppins", sans-serif;
+}
+
+.logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.logo span{
+    color: #FFED4F;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-button{
+    display: flex;
+    gap: 30px;
+}
+
+.nav-button a{
+    color: #ebebeb;
+    font-weight: 400;
+    transition: 0.3 ease;
+}
+
+.nav-button a:hover,
+.nav-button a:active{
+    color: #fff;
+    font-weight:600;
+    transform: scale(1.1);
+}
+
+.account-icon{
+    width: 45px;
+}
+
+/* ----- Main Content ----- */
+/* ----- Add Data Form Box----- */
+
+main{
+    display: block;
+    padding: 130px 265px;
+}
+
+.card{
+    padding: 53px 80px 53px 80px;
+    background-color: #E3E2F0;
+    border-radius: 45px;
+}
+
+/* ----- Add Data Form Header----- */
+
+.card-header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+}
+
+.add-dataIcon{
+    width: 70px;
+    height: 70px;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 23px;
+    color: #282828;
+}
+
+.title-desc{
+    font-weight: 400;
+    font-size: 19px;
+    color: #282828;
+}
+
+/* ----- Add Data Form ----- */
+
+.form {
+    font-family: "Inter", sans-serif;
+    border-radius: 8px;
+}
+
+.form-input{
+    padding-bottom: 29px;
+}
+
+form label {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+form input[type="text"],
+form input[type="date"] {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* ----- Add Data Form Button ----- */
+
+.button{
+    padding-top: 50px;
+    padding-bottom: 22px;
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+}
+
+form input[type="submit"],
+form input[type="reset"]{
+    background-color: #008DDC;
+    color: white;
+    padding: 10px 55px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Inter", sans-serif;
+    border : 2px solid #496ADE;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+form input[type="reset"]:hover,
+form input[type="submit"]:hover{
+    background-color: #026097;
+}
