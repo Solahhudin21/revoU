@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD DATA</title>
+    <link rel="stylesheet" href="css/addData.css">  
+   
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div>NYC <span>POPERTY</span> SALES</div>
+        </div>
+        <nav>
+            <div class="nav-button">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="addData.html">Add Data</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            <img src="assets/account icon.png" alt="Account Icon" class="account-icon">
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <img src="assets/AddDataIcon.png" alt="Add Data Icon" class="add-dataIcon">
+                <div class="header-desc">
+                    <div class="title">Add New Data</div>
+                    <div class="title-desc">Input Your Data Below</div>
+                </div>
+            </div>
+            <div class="form">
+                <form action="" method="POST">
+                    <div class="form-input">
+                        <label for="borough">Borough</label>
+                        <input type="text" id="borough" name="borough" placeholder="Borough">
+                    </div>
+                    <div class="form-input">
+                        <label for="neighborhood">Neighborhood</label>
+                        <input type="text" id="neighborhood" name="neighborhood" placeholder="Neighborhood" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="bClass">Buliding Class Category </label>
+                        <input type="text" id="bClass" name="bClass" placeholder="Buliding Class Category" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="block">Block </label>
+                        <input type="text" id="block" name="block" placeholder="Block" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for= "lot">Lot </label>
+                        <input type="text" id="lot" name="lot" placeholder="Lot" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="address">Address </label>
+                        <input type="text" id="address" name="address" placeholder="Address" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="zCode">Zip Code </label>
+                        <input type="text" id="zCode" name="zCode" placeholder="Zip Code" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="tUnits"> Total Units </label>
+                        <input type="text" id="tUnits" name="tUnits" placeholder="Total Units" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="lndSquare">Land Square </label>
+                        <input type="text" id="lndSquare" name="lndSquare" placeholder= "m&sup2" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="yBuild">Year Build </label>
+                        <input type="text" id="yBuild" name="yBuild" placeholder="Year Build" pattern="\d{4}" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="txClass">Tax Class </label>
+                        <input type="text" id="txClass" name="txClass" placeholder="Tax Class" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="slPrice">Sale Price</label>
+                        <input type="text" id="slPrice" name="slPrice" placeholder="USD" required></input>
+                    </div>
+                    <div class="form-input">
+                        <label for="slDate">Sale Date </label>
+                        <input type="text" id="slDate" name="slDate" placeholder="yyyy-mm-dd" pattern="\d{4}-\d{2}-\d{2}" required></input>
+                    </div>
+                    <div class="button">
+                        <div>
+                            <input type="reset" value="Cancel" onclick="window.location.href='Dashboard.html'">
+                        </div>
+                        <div>
+                            <input type="submit" value="Submit" onclick="window.location.href='Dashboard.html'">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</html>

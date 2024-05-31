@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYC PROPERTY SALES</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css"
+    />
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <div class="acc-icon-container">
+                    <img src="assets/account icon.png" alt="Account Icon" class="account-icon"/>
+                </div>
+                
+                <ul>
+                    <li>
+                        <a href="dashboard.html" class="nav-menu">
+                            <img src="assets/dashboard_icon.png" alt="Dashboard Icon" class="dashboard-icon"/>
+                        </a>     
+                    </li>
+                    <li>
+                        <a href="addData.html" class="nav-menu">
+                            <img src="assets/addData_icon.png" alt="Add Data Icon" class="addData-icon"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="feedback.html" class="nav-menu">
+                            <img src="assets/feedback_icon.png" alt="Feedback Icon" class="feedback-icon"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="logOut-menu">
+                            <img src="assets/logOut_icon.png" alt="Log Out Icon" class="logOut-icon"/> 
+                            Log Out
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+        </nav>
+
+        <header>
+            <div class="logo">
+                <div>NYC <span>PROPERTY</span> SALES</div>
+            </div>
+
+            <div class="filter-button">
+                <div class="borough-filter">
+                    <button class="dropbtn-borough">Borough <img src="assets/dorpdown arrow.png"/></button>
+                    <div class="borough-dropdwn-content">
+                        <a href="#" data-id="1">Manhattan</a>
+                        <a href="#" data-id="2">Bronx</a>
+                        <a href="#" data-id="3">Brooklyn</a>
+                        <a href="#" data-id="4">Queens</a>
+                        <a href="#" data-id="5">Staten Island</a>
+                    </div>   
+                </div> 
+            </div>
+        </header>
+        
+        <main>
+            <div class="grid-container">
+                <div class="scorecode1">
+                    <div class="titles">Total Sales Price</div>
+                    <div class="scoretotal">
+                        <p id="total-sale-price"></p>
+                        <script src="js/sale.js"></script>
+                    </div>
+                </div>
+
+                <div class="scorecode2">
+                    <div class="titles">Total Building/Property</div>
+                    <div class="scoreprop">
+                        <p id="total-property"></p>
+                        <script src="js/bulding.js"></script> 
+                    </div>
+                </div>
+
+                <div class="tabel">
+                    <div class="tabelrec">
+                        <table id="data-tabel">
+                            <thead>
+                                <tr>
+                                    <th>BOROUGH</th>
+                                    <th>NEIGHBORHOOD</th>
+                                    <th>YEAR_BUILT</th>
+                                    <th>BUILDING_CATEGORY</th>
+                                    <th>SALE_PRICE</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <script src="js/tabel.js"></script>           
+                    </div>
+                </div>
+
+                <div class="piechart1">
+                    <div class="titles">Avg Sale Price Per Borough</div>
+                    <div class="pieavg">
+                        <canvas id="piechart-avg"></canvas>
+                    </div>
+                    <script src="js/avgpie.js" type="text/javascript"></script>
+                </div>
+
+                <div class="piechart2">
+                    <div class="titles">Total Property Sales Per Borough</div>
+                    <div class= "pietotal" >
+                        <canvas id= "pie-total-property-sales"></canvas>
+                    </div>
+                    <script src="js/totalPropPie.js"></script> 
+                </div>  
+
+                <div class="linetotal">
+                    <div class="titles">Total Property Sales in Each Borough</div>
+                    <div class="linechartotal">
+                        <canvas id="propertySalesChart"></canvas>
+                    </div>
+                    <script src="js/total.js"  type="text/javascript"></script>
+                </div>
+
+                <div class="totalavg">
+                    <div class="titles">Total Sales Vs Avg Sales Price Per Building Class Category</div>
+                    <div class="totalavgchart">
+                        <select id="buildingClassFilter">
+                            <option value="all">Semua</option>
+                        </select>
+                        <select id="sortOrderFilter">
+                            <option value="desc">Terbanyak ke Terkecil</option>
+                            <option value="asc">Terkecil ke Terbanyak</option>
+                        </select>
+                        <select id="dataDisplayFilter">
+                            <option value="both">Keduanya</option>
+                            <option value="total">Total Penjualan</option>
+                            <option value="average">Rata-rata Harga Penjualan</option>
+                        </select>
+                        <canvas id="salesVsAvgPriceChart"></canvas>
+                    </div>
+                    <script src="js/chart_data.js"></script>
+                </div>
+
+                <div class="totalprop">
+                    <div class="titles">Total Property Sales Based On Year Build</div>
+                    <div class="linechartprop">
+                        <canvas id= "propertySalesByYearBuiltChart"></canvas>
+                    </div> 
+                    <script src="js/yearbuilt.js"></script>    
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footertitle">Copyright &copy; Section Medan Team 10 RevoU</div>
+        </footer>  
+
+    </body>
+</html>
