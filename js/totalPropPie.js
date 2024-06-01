@@ -20,12 +20,6 @@ function createTotalPropertySalesByBorough(){
     }
 
     var dataForChart = [];
-    var dataForTooltip = [];
-    for(var i = 1; i <= 5; i++){
-        var percentage = (arrTotalPropSales[i] / totalSales) * 100;
-        dataForChart.push(arrTotalPropSales[i]);
-        dataForTooltip.push(arrTotalPropSales[i] + ' properties (' + percentage.toFixed(2) + '%)');
-    }
 
     new Chart(ctx, {
         type: 'pie',
@@ -46,15 +40,6 @@ function createTotalPropertySalesByBorough(){
               labels: {
                 boxWidth: 12,
               }
-            },
-            tooltip: {
-              // callbacks: {
-              //   label: function(context) {
-              //     var label = context.label;
-              //     var value = context.formattedValue;
-              //     return label + ': ' + value;
-              //   }
-              // }
             }
           }
         }
