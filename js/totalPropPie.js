@@ -1,4 +1,4 @@
-fetch('revoU/json/nycPropSales.json')
+fetch('json/nycPropSales.json')
     .then((response) => {
         return response.json();
     })
