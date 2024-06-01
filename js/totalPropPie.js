@@ -10,6 +10,8 @@ fetch('json/nycPropSales.json')
 function createTotalPropertySalesByBorough(){
     const ctx = document.getElementById('pie-total-property-sales');
     var arrTotalPropSales = { '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 };
+
+    var dataForChart = [];
     var totalSales = 0;
     for(var i = 1; i <= 5; i++){
         var arrBoroughFiltered = window.propertyData.filter((property) => property.BOROUGH == i.toString());
@@ -17,9 +19,8 @@ function createTotalPropertySalesByBorough(){
 
         arrTotalPropSales[i] = arrSalePriceFiltered.length;
         totalSales += arrSalePriceFiltered.length;
+        dataForChart.push(arrTotalPropSales[i]);
     }
-
-    var dataForChart = [];
 
     new Chart(ctx, {
         type: 'pie',
