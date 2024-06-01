@@ -1,7 +1,7 @@
 let sortedLabels = [];
 let sortedData = [];
 
-fetch('revoU/json/nycPropSales.json')
+fetch('json/nycPropSales.json')
 .then((response) => response.json())
 .then((data) => {
     const salesByYearBuilt = {};
