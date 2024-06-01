@@ -1,4 +1,4 @@
-fetch('json/forTable.json')
+fetch('revoU/json/forTable.json')
     .then((response) => {
         return response.json();
     })
