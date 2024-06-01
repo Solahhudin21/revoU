@@ -1,4 +1,4 @@
-fetch('json/nycPropSales.json')
+fetch('revoU/json/nycPropSales.json')
     .then((response) => {
         // Konversi teks menjadi objek JSON
         return response.json();
